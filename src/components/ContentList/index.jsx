@@ -1,8 +1,21 @@
+import ContentItem from "./ContentItem";
+import classes from "./index.module.css";
+
 const ContentList = ({ content }) => {
+  
   return (
-    <ul>
+    <ul className={classes.list}>
       {/* TODO: Display content */}
-      {console.info(`Available content: ${content}`)}
+      {content.map((item) => {
+        return (
+          <ContentItem
+            key={Math.random()}
+            src={item.image}
+            name={item.name}
+            status={item.status}
+          />
+        );
+      })}
     </ul>
   );
 };

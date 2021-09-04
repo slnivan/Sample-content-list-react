@@ -1,4 +1,4 @@
-import { useCallback, useState } from 'react';
+import { useCallback, useState } from "react";
 import Button from "../Button";
 import "./index.css";
 
@@ -10,7 +10,7 @@ const SearchInput = ({ onSearch }) => {
 
   return (
     <div className="SearchInput">
-      <input value={value} onChange={onSearchChange} />
+      <input value={value} onChange={onSearchChange} placeholder='Enter a name'/>
       <Button onClick={onSubmit}>Submit</Button>
     </div>
   );
